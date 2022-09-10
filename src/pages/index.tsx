@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import profileImg from "../assets/profile-image.jpg";
+import { UnderConstruction } from "../components/UnderConstruction";
 import Waves from "../components/Waves";
 
 const Home: NextPage = () => {
@@ -17,9 +18,9 @@ const Home: NextPage = () => {
         </div>
         <Waves />
       </div>
+      <div className="my-10">
 
-      <div className="relative h-[30vh] sm:h-[20vh] text-center bg-white flex justify-center items-center text-center">
-        <p> Content... </p>
+        <UnderConstruction />
       </div>
     </>
   );
