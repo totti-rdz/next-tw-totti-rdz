@@ -23,6 +23,14 @@ export const UnderConstruction = () => {
     setImgSrc(`https://i.giphy.com/media/${giphys[rdx]}/giphy.webp`);
   }, []);
 
+  const changeGif = () => {
+    setImgSrc(
+      `https://i.giphy.com/media/${
+        giphys[Math.floor(Math.random() * giphys.length)]
+      }/giphy.webp`
+    );
+  };
+
   return (
     <div
       className="w-full grow flex justify-center items-center flex-col space-y-10 p-5"
@@ -31,12 +39,16 @@ export const UnderConstruction = () => {
       <h1 className="text-4xl sm:text-5xl font-medium">
         <a href="#gifs">Work in progress</a>
       </h1>
-      {imgSrc && (
-        <img
-          src={imgSrc}
-          className="rounded-lg w-full sm:w-2/3 lg:w-1/2 2xl:w-1/3"
-        />
-      )}
+      {imgSrc && <GifContainer url={imgSrc} onClick={changeGif} />}
     </div>
   );
 };
+
+const GifContainer = ({ url, onClick }: { url: string; onClick: any }) => (
+  <div
+    className="rounded-lg w-full sm:w-2/3 lg:w-1/2 2xl:w-1/3 aspect-square"
+    onClick={onClick}
+  >
+    <img src={url} className="rounded-lg w-full" />
+  </div>
+);
