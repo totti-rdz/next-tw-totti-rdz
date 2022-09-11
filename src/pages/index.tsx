@@ -12,8 +12,9 @@ const Home: NextPage = () => {
             <Image src={profileImg} />
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold uppercase text-white shrink-1">
-            Hello world
-          </h1>
+          <span className="bg-[url('../assets/text-background-waves.webp')] bg-cover bg-center text-transparent bg-clip-text hover:bg-clip-border hover:text-white rounded-lg px-0 sm:px-5">
+              Hello world
+            </span>          </h1>
         </div>
         <Waves />
       </div>
