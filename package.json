@@ -1,4 +1,5 @@
 {
+  "author": "Thorsten Herfurtner",
   "private": true,
   "scripts": {
     "dev": "next dev",
