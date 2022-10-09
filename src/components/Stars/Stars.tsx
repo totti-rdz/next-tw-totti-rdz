@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import AnimatedStar from "./components/AnimatedStar";
 import Star from "./components/Star";
 
-type Props = {};
+const index = () => {
+  const [bool, setBool] = useState(true);
+  const startAnimation = () => setBool((current) => !current);
 
-const index = (props: Props) => {
   return (
     <div className="flex flex-col justify-center items-center p-5 space-y-5">
-      <div className="flex">
-        <Star />
-        <Star />
-        <Star />
-        <Star />
-        <Star />
+      <div className="flex" onClick={startAnimation}>
+        <AnimatedStar triggerAnimation={bool} delay={0.1} />
+        <AnimatedStar triggerAnimation={bool} delay={0.2} />
+        <AnimatedStar triggerAnimation={bool} delay={0.3} />
+        <AnimatedStar triggerAnimation={bool} delay={0.4} />
+        <AnimatedStar triggerAnimation={bool} delay={0.5} />
       </div>
       <div>
         <p>

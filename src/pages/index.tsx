@@ -21,12 +21,12 @@ const Home: NextPage = () => {
         </div>
         <Waves />
       </section>
-      <section className="space-y-10 ">
-        <div className="">
-          <UnderConstruction />
-        </div>
+      <section className="space-y-10 my-10">
         <div className="w-full">
           <Stars />
+        </div>
+        <div className="">
+          <UnderConstruction />
         </div>
       </section>
     </>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Star = () => (
   <svg
-    className="block w-12 sm:w-20 h-12 sm:h-20 fill-current text-yellow-400 shrink"
+    className="block w-12 sm:w-20 h-12 sm:h-20 fill-current text-yellow-400"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
     aria-hidden="true"
