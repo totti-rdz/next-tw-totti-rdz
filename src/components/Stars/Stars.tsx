@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AnimatedStar from "./components/AnimatedStar";
+import Quote from "./components/Quote";
 
 const index = () => {
   const [bool, setBool] = useState(true);
@@ -14,15 +15,11 @@ const index = () => {
         <AnimatedStar triggerAnimation={bool} delay={0.4} />
         <AnimatedStar triggerAnimation={bool} delay={0.5} />
       </div>
-      <div>
-        <p>
-          <q>
-            The smartest, most hard-working and the most handsome young man out
-            there!
-          </q>
-        </p>
-        <p>&ndash; Mother</p>
-      </div>
+      <Quote
+        quote="The smartest, most hard-working and the most handsome young man out
+            there!"
+        author="Mother"
+      />
     </div>
   );
 };
