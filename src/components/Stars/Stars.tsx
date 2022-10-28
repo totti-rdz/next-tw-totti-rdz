@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import AnimatedStar from "./components/AnimatedStar";
-import Star from "./components/Star";
 
 const index = () => {
   const [bool, setBool] = useState(true);
