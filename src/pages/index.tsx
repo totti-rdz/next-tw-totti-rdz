@@ -2,8 +2,9 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import profileImg from "../assets/profile-image.jpg";
 import Waves from "../components/Waves";
-import { UnderConstruction } from "../components/UnderConstruction";
+import { UnderConstruction } from "../components/UnderConstruction/UnderConstruction";
 import Stars from "../components/Stars/Stars";
+import Statistics from "../components/Statistics/Statistics";
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +25,9 @@ const Home: NextPage = () => {
       <section className="space-y-10 my-10">
         <div className="w-full">
           <Stars />
+        </div>
+        <div className="w-full">
+          <Statistics />
         </div>
         <div className="">
           <UnderConstruction />
