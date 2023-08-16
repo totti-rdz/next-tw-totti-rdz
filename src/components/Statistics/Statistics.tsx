@@ -1,45 +1,33 @@
 import React, { useEffect, useState } from "react";
-import Stat from "./components/Stat";
+import StatisticsView from "./components/StatisticsView/StatisticsView";
+import { getDaysAlive } from "./components/StatisticsView/helper/getDaysAlive";
 
-type Props = {};
+const daysAlive = getDaysAlive();
+const height = 176;
+const averageSleepingTimeInHours = 8;
+const hoursSlept = daysAlive * averageSleepingTimeInHours;
 
-const Statistics = (props: Props) => {
-  const durationTime = 100;
-  const updateInterval = 10; //millisecondsInSecond / framesPerSecond;
-  const [elapsedTime, SetElapsedTime] = useState(0);
+const StatisticsProvider = () => {
+  const [amountGithubRepos, setAmountGithubRepos] = useState(0);
+
+  const data = [
+    { description: "Days alive", value: daysAlive },
+    { description: "Height in cm", value: height },
+    { description: "Hours slept", value: hoursSlept },
+    { description: "Github projects", value: amountGithubRepos },
+  ];
 
   useEffect(() => {
-    let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
+    const getData = async (url: string) => {
+      const response = await (await fetch(url)).json();
 
-    if (elapsedTime < durationTime) {
-      timeout = setTimeout(() => {
-        SetElapsedTime((current) => ++current);
-      }, updateInterval);
-    }
-
-    return () => {
-      clearTimeout(timeout);
+      setAmountGithubRepos(response.public_repos);
     };
-  }, [elapsedTime]);
 
-  return (
-    <div className="flex justify-center items-center p-5 gap-4">
-      <Stat
-        value={101234}
-        text={"stat"}
-        time={durationTime}
-        elapsedTime={elapsedTime}
-        updateInterval={updateInterval}
-      />
-      <Stat
-        value={200}
-        text="stat2"
-        time={durationTime}
-        updateInterval={updateInterval}
-        elapsedTime={elapsedTime}
-      />
-    </div>
-  );
+    getData("https://api.github.com/users/totti-rdz");
+  }, []);
+
+  return <StatisticsView data={data} />;
 };
 
-export default Statistics;
+export default StatisticsProvider;
