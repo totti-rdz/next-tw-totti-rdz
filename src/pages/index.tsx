@@ -24,10 +24,10 @@ const Home: NextPage = () => {
       </section>
       <section className="space-y-10 my-10">
         <div className="w-full">
-          <Statistics />
+          <Stars />
         </div>
         <div className="w-full">
-          <Stars />
+          <Statistics />
         </div>
         <div className="">
           <UnderConstruction />
