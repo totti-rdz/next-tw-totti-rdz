@@ -27,12 +27,13 @@ const StatisticsView = ({ data }: Props) => {
   return (
     <div className="flex justify-center items-center p-5 gap-4 flex-wrap">
       {!!data &&
-        data.map((stat) => (
+        data.map((stat, idx) => (
           <Stat
             value={stat.value}
             description={stat.description}
             time={durationTime}
             elapsedTime={elapsedTime}
+            key={idx}
           />
         ))}
     </div>
