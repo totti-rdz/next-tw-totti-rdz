@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        white: "#FEFEFA",
+      },
       keyframes: {
         wavesFrames: {
           "0%": { transform: "translate3d(-90px, 0, 0)" },
