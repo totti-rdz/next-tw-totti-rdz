@@ -5,6 +5,7 @@ import Waves from "../components/Waves";
 import { UnderConstruction } from "../components/UnderConstruction/UnderConstruction";
 import Stars from "../components/Stars/Stars";
 import Statistics from "../components/Statistics/Statistics";
+import AboutMe from "../components/AboutMe/AboutMe";
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +23,10 @@ const Home: NextPage = () => {
         </div>
         <Waves />
       </section>
-      <section className="space-y-10 my-10">
+      <section className="space-y-10 mt-20 mb-10">
+        <div className="w-full space-y-10">
+          <AboutMe />
+        </div>
         <div className="w-full">
           <Stars />
         </div>
