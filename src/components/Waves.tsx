@@ -2,7 +2,7 @@ import React from "react";
 
 const Waves = () => {
   return (
-    <div>
+    <div className="text-white">
       <svg
         className="relative w-full h-fit sm:h-[15vh] mb-[-7px] min-h-[40px] sm:min-h-[100px] max-h-[150px]"
         xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ const Waves = () => {
             fill="rgba(255,255,255,0.3)"
           />
           <use
-            className="animate-[wavesFrames_20s_infinite] animation-delay-wave4"
+            className="animate-[wavesFrames_20s_infinite] animation-delay-wave4 fill-current text-current"
             style={{
               animationTimingFunction: "cubic-bezier(.55,.5,.45,.5)",
               animationDelay: "-5s",
@@ -60,7 +60,7 @@ const Waves = () => {
             xlinkHref="#gentle-wave"
             x="48"
             y="7"
-            fill="#fff"
+            // fill="#FEFEFA"
           />
         </g>
       </svg>
