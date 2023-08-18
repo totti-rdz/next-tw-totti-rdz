@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Stat, { TStat } from "./components/Stat";
 
-type Props = { data: TStat[] };
+type Props = { data: TStat[]; startCountUp?: boolean };
 
-const StatisticsView = ({ data }: Props) => {
+const StatisticsView = ({ data, startCountUp = true }: Props) => {
   const durationTime = 100;
   const updateInterval = 10; // ms
   const [elapsedTime, SetElapsedTime] = useState(0);
-  const [startCountUp, setStartCountUp] = useState(true);
 
   useEffect(() => {
     if (!startCountUp) return;
@@ -22,7 +21,7 @@ const StatisticsView = ({ data }: Props) => {
     return () => {
       clearTimeout(timeout);
     };
-  }, [elapsedTime]);
+  }, [elapsedTime, startCountUp]);
 
   return (
     <div className="flex justify-center items-center p-5 gap-4 flex-wrap">

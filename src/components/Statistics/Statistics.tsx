@@ -7,7 +7,11 @@ const height = 176;
 const averageSleepingTimeInHours = 8;
 const hoursSlept = daysAlive * averageSleepingTimeInHours;
 
-const StatisticsProvider = () => {
+type Props = {
+  startCountUp?: boolean;
+};
+
+const StatisticsProvider = ({ startCountUp }: Props) => {
   const [amountGithubRepos, setAmountGithubRepos] = useState(0);
 
   const data = [
@@ -27,7 +31,9 @@ const StatisticsProvider = () => {
     getData("https://api.github.com/users/totti-rdz");
   }, []);
 
-  return <StatisticsView data={data} />;
+  console.log("startCountup", startCountUp);
+
+  return <StatisticsView data={data} startCountUp={startCountUp} />;
 };
 
 export default StatisticsProvider;
