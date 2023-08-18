@@ -19,7 +19,7 @@ const index = ({}: Props) => {
           imgSize={640}
         />
       </SlideInOnViewWrapper>
-      <SlideInOnViewWrapper triggerProp="show">
+      <SlideInOnViewWrapper triggerProp="show" reverse>
         <TextBox
           title="Progressing through..."
           list={[
