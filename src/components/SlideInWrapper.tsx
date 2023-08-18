@@ -7,13 +7,15 @@ type Props = {
 };
 
 const SlideInWrapper = ({ children, reverse = false, show = true }: Props) => {
-  const translateDirection = reverse ? "-translate-x-[100vw]" : "translate-x-[100vw]";
+  const translateDirection = reverse
+    ? "-translate-x-[100vw]"
+    : "translate-x-[100vw]";
   const translateXClass = show ? "translate-x-0" : translateDirection;
 
   return (
     <div className="w-full overflow-hidden">
       <div
-        className={`${translateXClass} transition ease-in-out duration-1000`}
+        className={`${translateXClass} transition ease-in-out duration-1000 sm:duration-[1500ms]`}
       >
         {children}
       </div>
