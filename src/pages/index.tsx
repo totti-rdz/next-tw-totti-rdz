@@ -6,6 +6,7 @@ import { UnderConstruction } from "../components/UnderConstruction/UnderConstruc
 import Stars from "../components/Stars/Stars";
 import Statistics from "../components/Statistics/Statistics";
 import AboutMe from "../components/AboutMe/AboutMe";
+import TriggerOnViewWrapper from "../components/TriggerOnViewWrapper/TriggerOnViewWrapper";
 
 const Home: NextPage = () => {
   return (
@@ -28,10 +29,14 @@ const Home: NextPage = () => {
           <AboutMe />
         </div>
         <div className="w-full">
-          <Stars />
+          <TriggerOnViewWrapper triggerProp="startAnimation">
+            <Stars />
+          </TriggerOnViewWrapper>
         </div>
         <div className="w-full">
-          <Statistics />
+          <TriggerOnViewWrapper triggerProp="startCountUp">
+            <Statistics />
+          </TriggerOnViewWrapper>
         </div>
         <div className="">
           <UnderConstruction />
