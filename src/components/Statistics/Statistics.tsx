@@ -31,8 +31,6 @@ const StatisticsProvider = ({ startCountUp }: Props) => {
     getData("https://api.github.com/users/totti-rdz");
   }, []);
 
-  console.log("startCountup", startCountUp);
-
   return <StatisticsView data={data} startCountUp={startCountUp} />;
 };
 
