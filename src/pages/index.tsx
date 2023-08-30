@@ -7,6 +7,7 @@ import Stars from "../components/Stars/Stars";
 import Statistics from "../components/Statistics/Statistics";
 import AboutMe from "../components/AboutMe/AboutMe";
 import TriggerOnViewWrapper from "../components/TriggerOnViewWrapper/TriggerOnViewWrapper";
+import ButtonHeadSpin from "../components/ButtonSpinHead/ButtonSpinHead";
 
 const Home: NextPage = () => {
   return (
@@ -37,6 +38,9 @@ const Home: NextPage = () => {
           <TriggerOnViewWrapper triggerProp="startCountUp">
             <Statistics />
           </TriggerOnViewWrapper>
+        </div>
+        <div className="w-full grid place-items-center">
+          <ButtonHeadSpin />
         </div>
         <div className="">
           <UnderConstruction />
