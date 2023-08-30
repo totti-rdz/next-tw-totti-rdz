@@ -33,13 +33,8 @@ export const UnderConstruction = () => {
   };
 
   return (
-    <div
-      className="w-full grow flex justify-center items-center flex-col space-y-10 p-5"
-      id="gifs"
-    >
-      <h1 className="text-4xl sm:text-5xl font-medium">
-        <a href="#gifs">Work in progress</a>
-      </h1>
+    <div className="w-full grow flex justify-center items-center flex-col space-y-10 p-5">
+      <h1 className="text-4xl sm:text-5xl font-medium">Work in progress</h1>
       {imgSrc && <GifContainer url={imgSrc} onClick={changeGif} />}
     </div>
   );
