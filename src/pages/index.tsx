@@ -40,6 +40,7 @@ const Home: NextPage = () => {
           </TriggerOnViewWrapper>
         </div>
         <div className="w-full grid place-items-center">
+          {/* TODO: make this button more eye-catchy, maybe animate the text, like a wave where single letters are jumping while getting bigger one after another */}
           <ButtonHeadSpin />
         </div>
         <div className="">
