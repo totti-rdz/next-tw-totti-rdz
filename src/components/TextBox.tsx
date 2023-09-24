@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image";
 
 type Props = {
   img: string;
+  imgIsPriority?: boolean;
   imgSize: number;
   isReversed?: boolean;
   list?: string[];
@@ -12,6 +13,7 @@ type Props = {
 
 const TextBox = ({
   img,
+  imgIsPriority,
   imgSize,
   isReversed = false,
   list,
@@ -45,6 +47,7 @@ const TextBox = ({
           width={imgSize}
           height={imgSize}
           className="rounded-3xl"
+          priority={imgIsPriority}
         />
       </div>
     </div>
