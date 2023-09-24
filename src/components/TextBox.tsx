@@ -44,7 +44,7 @@ const TextBox = ({
           src={img}
           width={imgSize}
           height={imgSize}
-          className=""
+          className="rounded-3xl"
         />
       </div>
     </div>
