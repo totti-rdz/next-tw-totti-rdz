@@ -17,6 +17,7 @@ const index = ({}: Props) => {
           ]}
           img={"/assets/about-me/me-lab_640x640.jpg"}
           imgSize={640}
+          imgIsPriority={true}
         />
       </SlideInOnViewWrapper>
       <SlideInOnViewWrapper triggerProp="show" reverse>
@@ -29,6 +30,7 @@ const index = ({}: Props) => {
           ]}
           img={"/assets/about-me/rpi_640x640.jpg"}
           imgSize={640}
+          imgIsPriority={true}
           isReversed
         />
       </SlideInOnViewWrapper>
@@ -42,6 +44,7 @@ const index = ({}: Props) => {
           ]}
           img={"/assets/about-me/coding_640x640.webp"}
           imgSize={640}
+          imgIsPriority={true}
         />
       </SlideInOnViewWrapper>
     </>
