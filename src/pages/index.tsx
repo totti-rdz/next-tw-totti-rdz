@@ -8,6 +8,7 @@ import Statistics from "../components/Statistics/Statistics";
 import AboutMe from "../components/AboutMe/AboutMe";
 import TriggerOnViewWrapper from "../components/TriggerOnViewWrapper/TriggerOnViewWrapper";
 import ButtonHeadSpin from "../components/ButtonSpinHead/ButtonSpinHead";
+import SkillsScroller from "../components/SkillScroller/SkillScroller";
 
 const Home: NextPage = () => {
   return (
@@ -38,6 +39,9 @@ const Home: NextPage = () => {
           <TriggerOnViewWrapper triggerProp="startCountUp">
             <Statistics />
           </TriggerOnViewWrapper>
+        </div>
+        <div className="w-full grid place-items-center">
+          <SkillsScroller />
         </div>
         <div className="w-full grid place-items-center">
           {/* TODO: make this button more eye-catchy, maybe animate the text, like a wave where single letters are jumping while getting bigger one after another */}
